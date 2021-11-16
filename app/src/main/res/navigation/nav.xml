@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav"
+    app:startDestination="@id/viewVideoFragment">
+
+    <fragment
+        android:id="@+id/viewVideoFragment"
+        android:name="com.example.dfl.viewVideoFragment"
+        android:label="fragment_view_video"
+        tools:layout="@layout/fragment_view_video" >
+        <action
+            android:id="@+id/action_viewVideoFragment_to_editUserFragment"
+            app:destination="@id/editUserFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/imageFragment"
+        android:name="com.example.dfl.ImageFragment"
+        android:label="fragment_image"
+        tools:layout="@layout/fragment_image" >
+        <action
+            android:id="@+id/action_imageFragment_to_editUserFragment"
+            app:destination="@id/editUserFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/liDarFragment"
+        android:name="com.example.dfl.LiDarFragment"
+        android:label="fragment_li_dar"
+        tools:layout="@layout/fragment_li_dar" >
+        <action
+            android:id="@+id/action_liDarFragment_to_editUserFragment"
+            app:destination="@id/editUserFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/radarFragment"
+        android:name="com.example.dfl.RadarFragment"
+        android:label="fragment_radar"
+        tools:layout="@layout/fragment_radar" >
+        <action
+            android:id="@+id/action_radarFragment_to_editUserFragment"
+            app:destination="@id/editUserFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/editUserFragment"
+        android:name="com.example.dfl.editUserFragment"
+        android:label="fragment_edit_user"
+        tools:layout="@layout/fragment_edit_user" />
+    <activity
+        android:id="@+id/mainActivity"
+        android:name="com.example.dfl.MainActivity"
+        android:label="activity_main"
+        tools:layout="@layout/activity_main" />
+</navigation>

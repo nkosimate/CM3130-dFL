@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/videoNav"
+        android:icon="@drawable/ic_baseline_ondemand_video_24"
+        android:title="Video" />
+    <item
+        android:id="@+id/imageNav"
+        android:icon="@android:drawable/ic_menu_gallery"
+        android:title="Image" />
+    <item
+        android:id="@+id/liDarNav"
+        android:icon="@drawable/lidar"
+        android:title="LiDar" />
+    <item
+        android:id="@+id/radarNav"
+        android:icon="@drawable/radar"
+        android:title="Radar" />
+</menu>
