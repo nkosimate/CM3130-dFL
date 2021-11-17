@@ -29,7 +29,7 @@
         app:layout_constraintTop_toBottomOf="@+id/imageView3" />
 
     <Spinner
-        android:id="@+id/spinner"
+        android:id="@+id/dateSelector"
         android:layout_width="246dp"
         android:layout_height="56dp"
         android:layout_marginStart="20dp"
@@ -46,7 +46,7 @@
         android:layout_height="347dp"
         android:src="@drawable/imageofrunway"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/spinner" />
+        app:layout_constraintTop_toBottomOf="@+id/dateSelector" />
 
     <ImageButton
         android:id="@+id/editUserBttn"

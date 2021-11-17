@@ -16,7 +16,7 @@
         android:background="#537493 "
         android:minHeight="48dp"
         android:src="@drawable/ic_baseline_person_24"
-        app:layout_constraintBottom_toTopOf="@+id/spinner2"
+        app:layout_constraintBottom_toTopOf="@+id/videoSpinner"
         app:layout_constraintEnd_toEndOf="parent"
         tools:ignore="SpeakableTextPresentCheck" />
 
@@ -31,7 +31,7 @@
         app:srcCompat="@drawable/ic_baseline_calendar_today_24" />
 
     <Spinner
-        android:id="@+id/spinner2"
+        android:id="@+id/videoSpinner"
         android:layout_width="215dp"
         android:layout_height="48dp"
         android:layout_marginStart="28dp"
@@ -57,9 +57,9 @@
         android:layout_height="259dp"
         android:layout_marginTop="40dp"
         android:src="@drawable/ic_baseline_ondemand_video_24"
-        app:layout_constraintEnd_toEndOf="@+id/spinner2"
+        app:layout_constraintEnd_toEndOf="@+id/videoSpinner"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/imageView4"
-        app:layout_constraintTop_toBottomOf="@+id/spinner2" />
+        app:layout_constraintTop_toBottomOf="@+id/videoSpinner" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -28,7 +28,7 @@
         app:layout_constraintTop_toBottomOf="@+id/imageView9" />
 
     <Spinner
-        android:id="@+id/spinner3"
+        android:id="@+id/radarSpinner"
         android:layout_width="239dp"
         android:layout_height="56dp"
         android:background="@color/white"
@@ -43,7 +43,7 @@
         android:src="@drawable/radar_big"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/spinner3" />
+        app:layout_constraintTop_toBottomOf="@+id/radarSpinner" />
 
     <ImageButton
         android:id="@+id/userEditBttn"

@@ -1,13 +1,25 @@
 package com.example.dfl;
 
+import android.os.Build;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ArrayAdapter;
 import android.widget.ImageButton;
+import android.widget.Spinner;
 
+import androidx.annotation.RequiresApi;
 import androidx.fragment.app.Fragment;
 import androidx.navigation.Navigation;
+
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
+import java.time.temporal.ChronoUnit;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.stream.Collectors;
+import java.util.stream.IntStream;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -56,6 +68,7 @@ public class ImageFragment extends Fragment implements View.OnClickListener {
         }
     }
 
+    @RequiresApi(api = Build.VERSION_CODES.O)
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -64,6 +77,31 @@ public class ImageFragment extends Fragment implements View.OnClickListener {
 
         ImageButton btnUsr = (ImageButton)view.findViewById(R.id.editUserBttn);
         btnUsr.setOnClickListener(this);
+
+        LocalDate todaysDate = LocalDate.now();
+
+        DateTimeFormatter myFormatObj = DateTimeFormatter.ofPattern("dd-MM-yyyy");
+        String formattedDate = todaysDate.format(myFormatObj);
+
+        String date = formattedDate.toString();
+        List<String> spinnerArray =  new ArrayList<String>();
+        spinnerArray.add(date);
+
+        LocalDate [] dates = new LocalDate[30];
+        String [] formateddates = new String[30];
+        String [] stringdates = new String[30];
+        for (int i = 1;i < dates.length;i++){
+            dates[i] = todaysDate.plusDays(i);
+            formateddates[i] = dates[i].format(myFormatObj);
+            stringdates[i] = formateddates[i].toString();
+            spinnerArray.add(stringdates[i]);
+        }
+
+        ArrayAdapter<String> adapter = new ArrayAdapter<String>(getContext(),android.R.layout.simple_spinner_item, spinnerArray);
+
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        Spinner sItems = (Spinner) view.findViewById(R.id.dateSelector);
+        sItems.setAdapter(adapter);
 
         return view;
     }
